@@ -5,5 +5,5 @@
 ## Installation
 
 ```bash
-composer require optimus/api-consumer 0.2.*
+composer require sanju-inapp/api-consumer
 ```
