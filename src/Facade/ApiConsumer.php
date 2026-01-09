@@ -1,0 +1,19 @@
+<?php
+
+namespace SanjuInapp\ApiConsumer\Facade;
+
+use Illuminate\Support\Facades\Facade;
+
+/**
+ * @see \SanjuInapp\ApiConsumer\Router
+ */
+class ApiConsumer extends Facade
+{
+    /**
+     * @return string
+     */
+    protected static function getFacadeAccessor()
+    {
+        return 'apiconsumer';
+    }
+}

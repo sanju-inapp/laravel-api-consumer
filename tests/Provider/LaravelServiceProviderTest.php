@@ -1,0 +1,24 @@
+<?php
+
+use Mockery as m;
+
+class LaravelServiceProviderTest extends Orchestra\Testbench\TestCase {
+
+    public function testServiceProviderIsWorking()
+    {
+        $appMock = m::mock('Illuminate\Foundation\Application');
+
+        $appMock->shouldReceive('singleton')->with(
+            'apiconsumer',
+            m::type('Closure')
+        );
+
+        $provider = $this->app->make('SanjuInapp\ApiConsumer\Provider\LaravelServiceProvider', [
+            'app' => $appMock
+        ]);
+
+        $this->assertNull($provider->register());
+        $provider->boot();
+    }
+    
+}

@@ -6,3 +6,14 @@ vendor/
 *.log
 .env
 composer.lock
+.idea/
+.phpunit.cache/
+.phpunit.result.cache
+phpunit.xml.bak
+.coveralls.yml
+.travis.yml
+*.swp
+*.swo
+*~
+.vscode/
+*.cache
